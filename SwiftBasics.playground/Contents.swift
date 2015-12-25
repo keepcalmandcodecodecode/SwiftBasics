@@ -2,12 +2,12 @@
 
 import UIKit
 
-//hello world
+//***hello world
 let strHello = "Hello "
 let strSwift = "Swift!"
 print(strHello+strSwift)
 
-//CodingBat: warmup 1
+//***CodingBat: warmup 1
 
 //sleepIn
 
@@ -22,3 +22,14 @@ sleepIn(true, vacation: false)
 //true
 sleepIn(false, vacation: true)
 
+//monkeyTrouble
+
+func monkeyTrouble(aSmile:Bool,bSmile:Bool)->Bool{
+    return (aSmile && bSmile)||(!aSmile && !bSmile)
+}
+//true
+monkeyTrouble(true, bSmile: true)
+//true
+monkeyTrouble(false, bSmile: false)
+//false
+monkeyTrouble(true, bSmile: false)
