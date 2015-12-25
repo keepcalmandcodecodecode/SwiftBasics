@@ -48,3 +48,14 @@ func sumDouble(a:Int,b:Int)->Int{
 sumDouble(1, b: 2)//3
 sumDouble(3, b: 2)//5
 sumDouble(2, b: 2)//8
+
+func diff21(n:Int)->Int{
+    let diff = abs(21-n)
+    if(n>21){
+        return diff*2
+    }
+    return diff
+}
+diff21(19)//2
+diff21(10)//11
+diff21(21)//0
