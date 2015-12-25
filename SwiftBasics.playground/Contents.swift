@@ -33,3 +33,18 @@ monkeyTrouble(true, bSmile: true)
 monkeyTrouble(false, bSmile: false)
 //false
 monkeyTrouble(true, bSmile: false)
+
+//sumDouble
+
+func sumDouble(a:Int,b:Int)->Int{
+    let sum = a+b
+    if(a == b){
+        return sum*2
+    } else {
+        return sum
+    }
+    
+}
+sumDouble(1, b: 2)//3
+sumDouble(3, b: 2)//5
+sumDouble(2, b: 2)//8
