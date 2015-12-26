@@ -59,3 +59,15 @@ func diff21(n:Int)->Int{
 diff21(19)//2
 diff21(10)//11
 diff21(21)//0
+
+//parrotTrouble
+
+func parrotTrouble(talking:Bool,hour:Int)->Bool{
+    return (hour<7||hour>20)&&talking
+}
+
+parrotTrouble(true, hour: 6)//true
+parrotTrouble(true, hour: 7)//false
+parrotTrouble(false, hour: 6)//false
+
+
