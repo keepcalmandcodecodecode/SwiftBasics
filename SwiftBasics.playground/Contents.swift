@@ -129,6 +129,30 @@ func missingChar(str:String,n:Int)->String{
     return firstPart+secondPart
 }
 
-missingChar("kitten", n: 1)
-missingChar("kitten", n: 0)
-missingChar("kitten", n: 4)
+missingChar("kitten", n: 1)//ktten
+missingChar("kitten", n: 0)//itten
+missingChar("kitten", n: 4)//kittn
+
+//frontBack
+
+func frontBack(str:String)->String{
+    if(str.characters.count<=1){
+        return str
+    }
+    let firstPart = (str as NSString).substringToIndex(1)
+    let lastPart = (str as NSString).substringFromIndex(str.characters.count-1)
+    if(str.characters.count<=2){
+        return lastPart+firstPart
+    }
+    let mediumPart = (str as NSString).substringWithRange(NSMakeRange(1, str.characters.count-2))
+    return lastPart+mediumPart+firstPart
+}
+
+frontBack("code")//eodc
+frontBack("a")//a
+frontBack("ab")//ba
+frontBack("abc")//cba
+frontBack("")//""
+frontBack("Chocolate")//ehocolatC
+frontBack("aavJ")//Java
+frontBack("hello")//oellh
