@@ -89,3 +89,14 @@ func nearHundred(n:Int)->Bool{
 nearHundred(93)//true
 nearHundred(90)//true
 nearHundred(89)//false
+
+//posNeg
+
+func posNeg(a:Int,b:Int,negative:Bool)->Bool{
+    return (negative && (a<0) && (b<0))||(!negative && ((a<0 && b>0)||((a>0 && b<0))))
+}
+
+posNeg(1, b: -1, negative: false)//true
+posNeg(-1, b: 1, negative: false)//true
+posNeg(-4, b: -5, negative: true)//true
+posNeg(-4, b: -5, negative: false)//false
