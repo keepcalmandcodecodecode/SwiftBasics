@@ -80,3 +80,12 @@ makes10(9, b: 10)//true
 makes10(9, b: 9)//false
 makes10(1, b: 9)//true
 
+//nearHundred
+
+func nearHundred(n:Int)->Bool{
+    return (abs(100-n)<=10)||(abs(200-n)<=10)
+}
+
+nearHundred(93)//true
+nearHundred(90)//true
+nearHundred(89)//false
