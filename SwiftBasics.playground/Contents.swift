@@ -156,3 +156,23 @@ frontBack("")//""
 frontBack("Chocolate")//ehocolatC
 frontBack("aavJ")//Java
 frontBack("hello")//oellh
+
+//front3
+
+func front3(str:String)->String{
+    let front:String;
+    if(str.characters.count<=3){
+        front = str
+    }else{
+        front = (str as NSString).substringToIndex(3)
+    }
+    return front+front+front
+}
+
+front3("Java")//JavJavJav
+front3("Chocolate")//ChoChoCho
+front3("abc")//abcabcabc
+front3("abcXYZ")//abcabcabc
+front3("ab")//ababab
+front3("a")//aaa
+front3("")//""
