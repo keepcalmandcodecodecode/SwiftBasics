@@ -70,4 +70,13 @@ parrotTrouble(true, hour: 6)//true
 parrotTrouble(true, hour: 7)//false
 parrotTrouble(false, hour: 6)//false
 
+//makes10
+
+func makes10(a:Int,b:Int)->Bool{
+    return (a==10)||(b==10)||((a+b)==10)
+}
+
+makes10(9, b: 10)//true
+makes10(9, b: 9)//false
+makes10(1, b: 9)//true
 
