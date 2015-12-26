@@ -100,3 +100,19 @@ posNeg(1, b: -1, negative: false)//true
 posNeg(-1, b: 1, negative: false)//true
 posNeg(-4, b: -5, negative: true)//true
 posNeg(-4, b: -5, negative: false)//false
+
+//notString
+
+func notString(str:String)->String{
+    let notString = "not "
+    if(str.hasPrefix("not")){
+        return str
+    }
+    else{
+        return notString+str
+    }
+}
+
+notString("candy")//not candy
+notString("x")//not x
+notString("not bad")//not bad
