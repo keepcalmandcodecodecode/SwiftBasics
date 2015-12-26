@@ -116,3 +116,19 @@ func notString(str:String)->String{
 notString("candy")//not candy
 notString("x")//not x
 notString("not bad")//not bad
+
+//missingChar
+
+func missingChar(str:String,n:Int)->String{
+    if (n>=str.characters.count){
+        return str
+    }
+    let firstPart = (str as NSString).substringToIndex(n)
+    let secondPart = (str as NSString).substringFromIndex(n+1)
+    
+    return firstPart+secondPart
+}
+
+missingChar("kitten", n: 1)
+missingChar("kitten", n: 0)
+missingChar("kitten", n: 4)
