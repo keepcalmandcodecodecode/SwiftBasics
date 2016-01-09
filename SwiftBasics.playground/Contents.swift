@@ -176,3 +176,16 @@ front3("abcXYZ")//abcabcabc
 front3("ab")//ababab
 front3("a")//aaa
 front3("")//""
+
+//backAround
+
+func backAround(str:String)->String{
+    let lastPart = (str as NSString).substringFromIndex(str.characters.count-1)
+    return lastPart+str+lastPart
+}
+backAround("cat") //tcatt
+backAround("Hello") //oHelloo
+backAround("a") //aaa
+backAround("abc") //cabcc
+backAround("read") //dreadd
+backAround("boo") //obooo
