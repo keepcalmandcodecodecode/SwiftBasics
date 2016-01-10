@@ -189,3 +189,16 @@ backAround("a") //aaa
 backAround("abc") //cabcc
 backAround("read") //dreadd
 backAround("boo") //obooo
+
+//or35
+
+func or35(n:Int)->Bool{
+    return n%3==0 || n%5==0
+}
+or35(3)//true
+or35(10)//true
+or35(8)//false
+or35(15)//true
+or35(5)//true
+
+
