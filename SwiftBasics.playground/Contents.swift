@@ -7,6 +7,10 @@ let strHello = "Hello "
 let strSwift = "Swift!"
 print(strHello+strSwift)
 
+let hello:String? = nil
+let helloNotNil = "HELLO"
+print("\(hello ?? helloNotNil) world!")
+
 //***CodingBat: warmup 1
 
 //sleepIn
@@ -201,4 +205,20 @@ or35(8)//false
 or35(15)//true
 or35(5)//true
 
+//front22
+func front22(str:String)->String{
+    let length:Int
+    if str.characters.count>=2 {
+        length = 2
+    } else {
+        length = str.characters.count
+    }
+    let firstTwo = (str as NSString).substringWithRange(NSMakeRange(0, length))
+    return firstTwo+str+firstTwo
+}
+front22("kitten")//kikittenki
+front22("Ha")//HaHaHa
+front22("abc")//ababcab
+front22("a")//aaa
+front22("")//""
 
