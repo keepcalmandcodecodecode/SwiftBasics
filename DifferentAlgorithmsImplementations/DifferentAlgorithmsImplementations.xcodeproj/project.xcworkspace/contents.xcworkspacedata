@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DifferentAlgoritmsImplementations.xcodeproj">
+      location = "self:DifferentAlgorithmsImplementations.xcodeproj">
    </FileRef>
 </Workspace>
