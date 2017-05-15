@@ -14,27 +14,22 @@ class BinarySearch: NSObject {
         let count = array.count
         if count == 0 {
             return NSNotFound
-        } else if count == 1 {
-            if element == array[0] {
-                return 0
-            } else {
-                return NSNotFound    
-            }
         }
         
-        var index = count / 2
-        var lowBorder = 0
-        var highBorder = count
-        var findedIndex = NSNotFound
         
-        while (lowBorder != highBorder)
+        var lowBorderIndex = 0
+        var highBorderIndex = count-1
+        var findedIndex = NSNotFound
+        var index = (highBorderIndex + lowBorderIndex)/2
+        while (lowBorderIndex <= highBorderIndex)
         {
+            
             if array[index] > element {
-                highBorder = index
-                index = lowBorder + (highBorder - lowBorder)/2
+                highBorderIndex = index - 1
+                index = (highBorderIndex + lowBorderIndex)/2
             } else if array[index] < element {
-                lowBorder = index
-                index = lowBorder + (count - lowBorder)/2
+                lowBorderIndex = index + 1
+                index = (highBorderIndex + lowBorderIndex)/2
             } else if array[index] == element {
                 findedIndex = index
                 return findedIndex
