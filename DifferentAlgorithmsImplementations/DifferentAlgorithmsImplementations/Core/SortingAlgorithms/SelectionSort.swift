@@ -17,7 +17,6 @@ class SelectionSort: NSObject {
             
             var minimalElement = mutableArray[0]
             var minimalIndex = 0
-            
             for (index,element) in mutableArray.enumerated() {
                 if element < minimalElement {
                     minimalElement = element
@@ -28,6 +27,7 @@ class SelectionSort: NSObject {
             let firstElement = mutableArray[0]
             mutableArray[0] = mutableArray[minimalIndex]
             mutableArray[minimalIndex] = firstElement
+            
             let unsortedTail = Array(mutableArray[1..<mutableArray.count])
             let sortedTail = sort(array: unsortedTail)
             mutableArray.replaceSubrange(Range(1..<mutableArray.count), with: sortedTail)
